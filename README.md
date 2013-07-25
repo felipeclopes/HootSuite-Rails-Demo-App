@@ -33,21 +33,17 @@ In the directory of your choice, run
 
 1. Make sure that the version of Ruby you are using is **1.9.3** by running `ruby --version`. Then, run `bundle install` inside the cloned repository location.
 
-2. If PostgreSQL is not already set up, set up and start the PostgreSQL server. 
+2. Run `rake db:migrate`.
 
-3. Edit **config/database.yml** to put in your PostgreSQL information.
-
-4. Run `rake db:migrate`.
-
-5. Go to your app at [http://hootsuite.com/developers/my-apps](http://hootsuite.com/developers/my-apps) to find your **sharedSecret** and **API Key**.
+3. Go to your app at [http://hootsuite.com/developers/my-apps](http://hootsuite.com/developers/my-apps) to find your **sharedSecret** and **API Key**.
     * If the **sharedSecret** field does not exist, that means that the **Authentication Type** is not **SSO**. Set it to **SSO** and the **sharedSecret** field should appear.
 
-6. Edit the **config/initializers/dev_environment.rb** file to set the correct values for **HOOTSUITE\_SHARED\_SECRET** and **HOOTSUITE\_API\_KEY**.
+4. Edit the **config/initializers/dev_environment.rb** file to set the correct values for **HOOTSUITE\_SHARED\_SECRET** and **HOOTSUITE\_API\_KEY**.
 
-7. Create a new stream for the demo app.
+5. Create a new stream for the demo app.
 
-8. Go to your App Stream and set the **&lt;iframe&gt;d URL** field to **http://localhost:3000**.
+6. Go to your App Stream and set the **&lt;iframe&gt;d URL** field to **https://localhost:3000**.
 
-9. Run `rails s` in the file directory to start the Rails server on **http://localhost:3000**.
+7. To run your app in localhost with ssl follow these instructions http://www.railway.at/2013/02/12/using-ssl-in-your-local-rails-environment/
 
-10. Install your app and add the new stream to a tab.
+8. Install your app and add the new stream to a tab.

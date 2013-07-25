@@ -1,10 +1,5 @@
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: postgresql
+  adapter: sqlite3
+  database: db/development.sqlite3
   pool: 5
-  username: root
-  password: 
-
-
-
+  timeout: 5000
